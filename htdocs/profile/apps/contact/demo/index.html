@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=width-device, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<!--html 5-->
+	<video ontimeupdate="demo()" id="v" width="720" height="480" controls="controls">
+		<source src="video.mp4"></source>
+	</video>
+	<button>Click</button>
+	<br>
+	<h1 id="result"></h1>
+
+	<script type="text/javascript">
+		function demo()
+		{
+			var video = document.getElementById("v");
+			var c_time = video.currentTime/60;
+			var t_time = video.duration/60;
+
+			var h = document.getElementById("result");
+			h.innerHTML = c_time.toFixed(2)+" / "+t_time.toFixed(2);
+			
+		}
+	</script>
+</body>
+</html>
